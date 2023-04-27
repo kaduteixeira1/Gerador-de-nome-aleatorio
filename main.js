@@ -3,17 +3,16 @@ function gerarNome(params) {
     nSilabas = parseInt(nSilabas)
 
     var name = ""
-
+    var sequencia 
     var vog, cons
-    vog = ""
-    cons = ""
-
+    
     for (let cSilabas = 1;cSilabas <= nSilabas ; cSilabas++) {
 
     var vogAleatoria 
     var consAleatoria 
     consAleatoria = parseInt(Math.random()*20+1)
     vogAleatoria = parseInt(Math.random()*4 + 1)
+    vogEcons = parseInt(Math.random()*1)  
 
         switch (consAleatoria) {
         case 1:
@@ -102,18 +101,14 @@ function gerarNome(params) {
         default:
             break;
     }
-    vogEcons = parseInt(Math.random()*1) 
-
-    var sequencia
-    sequencia = ""
-
+     
     switch (vogEcons) {
         case 0:
-            sequencia = cons + vog
+            sequencia = cons + vog 
             break;
         case 1: 
-            sequencia = vog + cons
-            break;
+            sequencia = vog + cons 
+            break; 
         default:
             break;
     }
@@ -122,10 +117,4 @@ function gerarNome(params) {
     }
 
     document.getElementById('r1').innerHTML = name
-    
-
-
-
-
-
 }
